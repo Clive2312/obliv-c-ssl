@@ -1,3 +1,65 @@
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE 1
+#endif
+
+#ifndef _DEFAULT_SOURCE
+#define _DEFAULT_SOURCE 1
+#endif
+
+#ifdef _FORTIFY_SOURCE
+#undef _FORTIFY_SOURCE
+#endif
+#define _FORTIFY_SOURCE 0
+
+#ifdef __USE_FORTIFY_LEVEL
+#undef __USE_FORTIFY_LEVEL
+#endif
+#define __USE_FORTIFY_LEVEL 0
+
+#ifdef __fortify_function
+#undef __fortify_function
+#endif
+
+#ifndef _Float16
+#define _Float16 float
+#endif
+
+#ifndef _Float32
+#define _Float32 float
+#endif
+
+#ifndef _Float32x
+#define _Float32x double
+#endif
+
+#ifndef _Float64
+#define _Float64 double
+#endif
+
+#ifndef _Float64x
+#define _Float64x long double
+#endif
+
+#ifndef _Float128
+#define _Float128 double
+#endif
+
+#ifndef __attr_dealloc
+#define __attr_dealloc(dealloc, argno)
+#endif
+
+#ifndef __attr_dealloc_free
+#define __attr_dealloc_free
+#endif
+
+#ifndef __fortified_attr_access
+#define __fortified_attr_access(mode, index, size)
+#endif
+
+#ifndef __fortified_attr_access_none
+#define __fortified_attr_access_none(index)
+#endif
+
 #include<assert.h>
 #include<obliv_common.h>
 #include<copy.oh>
